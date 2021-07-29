@@ -2,7 +2,7 @@
 name: CI
 on:
   push:
-    branches: [ all ]
+    branches: [ testar-job ]
   pull_request:
 jobs:
   linter:
