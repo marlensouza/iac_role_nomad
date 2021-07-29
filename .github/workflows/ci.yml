@@ -20,6 +20,6 @@ jobs:
         run: |
           python3 -m pip install --upgrade pip
           python3 -m pip install -r requirements.txt
-      - name: Running ansible linter
-        run:
-          ansible-lint
+      #- name: Running ansible linter
+      #  run:
+      #    ansible-lint
