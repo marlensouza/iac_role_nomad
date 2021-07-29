@@ -6,19 +6,19 @@
     state: present
 - name: "Instalando repositório HashCorp"
   apt_repository:
-    repo: "deb [arch=amd64] https://apt.releases.hashicorp.com {{ansible_facts['distribution_release']}} main"
+    repo: "deb [arch=amd64] https://apt.releases.hashicorp.com {{ ansible_facts['distribution_release'] }} main"
     state: present
     update_cache: yes
 - name: "Instalando Nomad"
   apt: 
-    name: "nomad={{nomad_version}}"
+    name: "nomad={{ nomad_version }}"
     state: present 
 - name: "Crianfo o arquivo de configuração"
   template:
-    src: "{{item}}"
+    src: "{{ item }}"
     dest: /etc/nomad.d/
-    owner: "{{nomad_user}}"
-    group: "{{nomad_group}}"
+    owner: "{{ nomad_user }}"
+    group: "{{ nomad_group }}"
     mode: 0644
   with_items:
     - client.hcl.j2
