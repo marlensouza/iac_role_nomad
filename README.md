@@ -37,3 +37,5 @@ Para realizar teste rápido após alguma modificação
 Ao termino do teste, destrua o ambiente
 
 (venv)$ molecule destroy
+
+#teste
